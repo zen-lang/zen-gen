@@ -66,7 +66,8 @@ Let's declare the configuration with the tag `zenden.core/definition` and use th
 ``` edn
 ;; zrc/example/definitions.edn
 {ns example.definitions
- import #{zengen.core
+ import #{example.core
+          zengen.core
           zengen.dataset.human.firstname
           zengen.dataset.human.lastname
           zengen.dataset.human.fullname
@@ -76,11 +77,11 @@ Let's declare the configuration with the tag `zenden.core/definition` and use th
  GeneratorHumanName
  {:zen/tags #{zengen.core/definition}
   :options  
-  {[HumanName :text]      {:confirms #{zengen.dataset.human.fullname/english}
-   [HumanName :family]    {:confirms #{zengen.dataset.human.lastname/english}}
-   [HumanName :given  :#] {:confirms #{zengen.dataset.human.firstname/english}}
-   [HumanName :suffix :#] {:confirms #{zengen.dataset.human.suffix/english}}
-   [HumanName :prefix :#] {:confirms #{zengen.dataset.human.prefix/english}}}}}}
+  {[example.core/HumanName :text]      {:confirms #{zengen.dataset.human.fullname/english}
+   [example.core/HumanName :family]    {:confirms #{zengen.dataset.human.lastname/english}}
+   [example.core/HumanName :given  :#] {:confirms #{zengen.dataset.human.firstname/english}}
+   [example.core/HumanName :suffix :#] {:confirms #{zengen.dataset.human.suffix/english}}
+   [example.core/HumanName :prefix :#] {:confirms #{zengen.dataset.human.prefix/english}}}}}}
 
 ```
 ``` clj
