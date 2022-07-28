@@ -1,0 +1,8 @@
+{ns zengen.dataset.human.prefix
+
+ english
+ {:zen/tags #{zen/schema}
+  :type     zen/string
+  :enum     [{:value "La"}
+             {:value "De"}]}}
+ 

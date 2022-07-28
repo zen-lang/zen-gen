@@ -1,0 +1,7 @@
+{ns zengen.test.datetime
+
+ datetime-base  {:zen/tags #{zen/schema} :type zen/datetime}
+ datetime-const {:zen/tags #{zen/schema} :type zen/datetime :const {:value "2022-07-26T10:15:30.420310Z"}}
+ datetime-enum  {:zen/tags #{zen/schema} :type zen/datetime :enum [{:value "2022-07-26T10:15:30.420310Z"}]}
+
+ }

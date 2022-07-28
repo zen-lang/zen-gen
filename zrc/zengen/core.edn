@@ -1,0 +1,11 @@
+{ns zengen.core
+ import #{zengen.dataset.human.firstname
+          zengen.dataset.human.lastname
+          zengen.dataset.human.fullname
+          zengen.dataset.human.suffix
+          zengen.dataset.human.prefix}
+
+ definition
+ {:zen/tags #{zen/tag zen/schema}
+  :type     zen/map
+  :keys     {:options {:type zen/map :key {:type zen/vector}}}}}

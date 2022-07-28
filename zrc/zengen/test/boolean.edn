@@ -1,0 +1,5 @@
+{ns zengen.test.boolean
+
+ boolean-base  {:zen/tags #{zen/schema} :type zen/boolean}
+ boolean-const {:zen/tags #{zen/schema} :type zen/boolean :const {:value true}}
+ boolean-enum  {:zen/tags #{zen/schema} :type zen/boolean :enum [{:value false}]}}

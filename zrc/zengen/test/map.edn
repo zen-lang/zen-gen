@@ -1,0 +1,7 @@
+{ns zengen.test.map
+
+ map-base    {:zen/tags #{zen/schema} :type zen/map}
+ map-keys    {:zen/tags #{zen/schema} :type zen/map :keys {:foo {:type zen/integer}}}
+ map-require {:zen/tags #{zen/schema} :type zen/map :require #{:foo} :keys {:foo {:type zen/integer} :bar {:type zen/symbol}}}
+
+ }

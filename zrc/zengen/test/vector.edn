@@ -1,0 +1,9 @@
+{ns zengen.test.vector
+
+ vector-base   {:zen/tags #{zen/schema} :type zen/vector}
+ vector-every  {:zen/tags #{zen/schema} :type zen/vector :every {:type zen/integer}}
+ vector-min    {:zen/tags #{zen/schema} :type zen/vector :every {:type zen/integer} :minItems 10}
+ vector-max    {:zen/tags #{zen/schema} :type zen/vector :every {:type zen/integer} :maxItems 0}
+ vector-minmax {:zen/tags #{zen/schema} :type zen/vector :every {:type zen/integer} :minItems 1 :maxItems 2}
+
+ }

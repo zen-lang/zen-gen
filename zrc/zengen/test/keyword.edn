@@ -1,0 +1,10 @@
+{ns zengen.test.string
+
+ string-base  {:zen/tags #{zen/schema} :type zen/string}
+ string-min   {:zen/tags #{zen/schema} :type zen/string :minLength 100}
+ string-max   {:zen/tags #{zen/schema} :type zen/string :maxLength 0}
+ string-regex {:zen/tags #{zen/schema} :type zen/string :regex "a{100}"}
+ string-const {:zen/tags #{zen/schema} :type zen/string :const {:value "foo"}}
+ string-enum  {:zen/tags #{zen/schema} :type zen/string :enum [{:value "foo"}]}
+
+ }

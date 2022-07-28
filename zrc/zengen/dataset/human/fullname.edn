@@ -1,0 +1,24 @@
+{ns zengen.dataset.human.fullname
+
+ english
+ {:zen/tags #{zen/schema}
+  :enum     [{:value "Ira Green"}
+             {:value "Lavon Wilson"}
+             {:value "Jamey Wood"}
+             {:value "Jaylin Robinson"}
+             {:value "Toby Smith"}
+             {:value "Ivy Thompson"}
+             {:value "Darby Walker"}
+             {:value "Ray Johnson"}
+             {:value "Melissa Hall"}
+             {:value "Donnie Williams"}
+             {:value "Akira Brown"}
+             {:value "Sidney Evans"}
+             {:value "Jordan Jones"}
+             {:value "Gayle Taylor"}
+             {:value "Mary Wright"}
+             {:value "Robbie Davies"}
+             {:value "Ivory Clark"}
+             {:value "Arley White"}
+             {:value "Lennie Roberts"}
+             {:value "Golden Jackson"}]}}

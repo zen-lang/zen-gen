@@ -1,0 +1,7 @@
+{ns zengen.test.symbol
+
+ symbol-base  {:zen/tags #{zen/schema} :type zen/symbol}
+ symbol-const {:zen/tags #{zen/schema} :type zen/symbol :const {:value symbol-base}}
+ symbol-enum  {:zen/tags #{zen/schema} :type zen/symbol :enum [{:value symbol-base}]}
+
+ }

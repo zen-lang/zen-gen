@@ -1,0 +1,24 @@
+{ns zengen.dataset.human.lastname
+
+ english
+ {:zen/tags #{zen/schema}
+  :enum     [{:value "Wood"}
+             {:value "Hall"}
+             {:value "Clark"}
+             {:value "Green"}
+             {:value "White"}
+             {:value "Evans"}
+             {:value "Brown"}
+             {:value "Jones"}
+             {:value "Smith"}
+             {:value "Walker"}
+             {:value "Wright"}
+             {:value "Davies"}
+             {:value "Wilson"}
+             {:value "Taylor"}
+             {:value "Jackson"}
+             {:value "Roberts"}
+             {:value "Johnson"}
+             {:value "Thompson"}
+             {:value "Robinson"}
+             {:value "Williams"}]}}

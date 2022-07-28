@@ -1,0 +1,7 @@
+{ns zengen.test.date
+
+ date-base  {:zen/tags #{zen/schema} :type zen/date}
+ date-const {:zen/tags #{zen/schema} :type zen/date :const {:value "2022-07-26"}}
+ date-enum  {:zen/tags #{zen/schema} :type zen/date :enum [{:value "2022-07-26"}]}
+
+ }

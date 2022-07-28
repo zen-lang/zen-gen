@@ -1,0 +1,8 @@
+{ns zengen.dataset.human.suffix
+
+ english
+ {:zen/tags #{zen/schema}
+  :type     zen/string
+  :enum     [{:value "Jr."}
+             {:value "Sr."}]}
+ }

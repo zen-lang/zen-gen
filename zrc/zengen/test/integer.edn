@@ -1,0 +1,9 @@
+{ns zengen.test.integer
+
+ integer-base   {:zen/tags #{zen/schema} :type zen/integer}
+ integer-min    {:zen/tags #{zen/schema} :type zen/integer :min 2147483646}
+ integer-max    {:zen/tags #{zen/schema} :type zen/integer :max -2147483647}
+ integer-minmax {:zen/tags #{zen/schema} :type zen/integer :min 0 :max 1}
+ integer-const  {:zen/tags #{zen/schema} :type zen/integer :const {:value 2147483647}}
+ integer-enum   {:zen/tags #{zen/schema} :type zen/integer :enum [{:value -2147483648}]}
+ }

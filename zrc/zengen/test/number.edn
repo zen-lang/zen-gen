@@ -1,0 +1,10 @@
+{ns zengen.test.number
+
+ number-base   {:zen/tags #{zen/schema} :type zen/number}
+ number-min    {:zen/tags #{zen/schema} :type zen/number :min 2147483646.0}
+ number-max    {:zen/tags #{zen/schema} :type zen/number :max -2147483648.0}
+ number-minmax {:zen/tags #{zen/schema} :type zen/number :min 0 :max 1}
+ number-const  {:zen/tags #{zen/schema} :type zen/number :const {:value 1.1}}
+ number-enum   {:zen/tags #{zen/schema} :type zen/number :enum [{:value -1.1}]}
+
+ }

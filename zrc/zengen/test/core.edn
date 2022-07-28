@@ -1,0 +1,40 @@
+{ns zengen.test.core
+ import #{zengen.test.boolean
+          zengen.test.integer
+          zengen.test.number
+          zengen.test.string
+          zengen.test.keyword
+          zengen.test.symbol
+          zengen.test.date
+          zengen.test.datetime
+          zengen.test.vector
+          zengen.test.map
+
+          zengen.core
+          zengen.dataset.human.firstname
+          zengen.dataset.human.lastname
+          zengen.dataset.human.fullname
+          zengen.dataset.human.suffix
+          zengen.dataset.human.prefix}
+
+ HumanName
+ {:zen/tags #{zen/schema}
+  :type     zen/map
+  :keys     {:use    {:type zen/string :enum [{:value "usual"} {:value "official"}]}
+             :text   {:type zen/string}
+             :given  {:type zen/vector :every {:type zen/string}}
+             :suffix {:type zen/vector :every {:type zen/string}}
+             :prefix {:type zen/vector :every {:type zen/string}}
+             :family {:type zen/string}
+             :period {:type zen/map
+                      :keys {:start {:type zen/datetime}
+                             :end   {:type zen/datetime}}}}}
+
+ GeneratorHumanName
+ {:zen/tags #{zen/schema zengen.core/definition}
+  :options  
+  {[HumanName :family]    {:confirms #{zengen.dataset.human.lastname/english}}
+   [HumanName :given  :#] {:confirms #{zengen.dataset.human.firstname/english}}
+   [HumanName :suffix :#] {:confirms #{zengen.dataset.human.suffix/english}}
+   [HumanName :prefix :#] {:confirms #{zengen.dataset.human.prefix/english}}
+   [HumanName :text]      {:confirms #{zengen.dataset.human.fullname/english}}}}}
