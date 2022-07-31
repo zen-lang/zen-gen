@@ -36,11 +36,8 @@ Create a schema describing the human's name
  HumanName
  {:zen/tags #{zen/schema}
   :type     zen/map
-  :keys     {:text   {:type zen/string}
-             :family {:type zen/string}
-             :given  {:type zen/vector :every {:type zen/string}}
-             :suffix {:type zen/vector :every {:type zen/string}}
-             :prefix {:type zen/vector :every {:type zen/string}}}}
+  :keys     {:family {:type zen/string}
+             :given  {:type zen/vector :every {:type zen/string}}}}
 ```
 Generate data based on the above scheme
 ``` clj
@@ -53,10 +50,7 @@ Generate data based on the above scheme
 ;; Data generation
 (zengen.core/example ztx {:confirms #{example.core/HumanName})
 ;; =>
-;; {:text   "E3Y]\\3nf_Eb",
-;;  :given  ["$QGn?DBRxM_JEB2" "6pMkz"],
-;;  :suffix ["]|u9T" "\"n+KnI#XQ"],
-;;  :prefix ["aObgbU"],
+;; {:given  ["$QGn?DBRxM_JEB2" "6pMkz"]
 ;;  :family "sJr)y"}
 ```
 Sometimes it is necessary to generate human-readable data
@@ -69,28 +63,20 @@ Let's declare the configuration with the tag `zenden.core/definition` and use th
  import #{example.core
           zengen.core
           zengen.dataset.human.firstname
-          zengen.dataset.human.lastname
-          zengen.dataset.human.fullname
-          zengen.dataset.human.suffix
-          zengen.dataset.human.prefix}
+          zengen.dataset.human.lastname}
 
  GeneratorHumanName
  {:zen/tags #{zengen.core/definition}
   :options  
-  {[example.core/HumanName :text]      {:confirms #{zengen.dataset.human.fullname/english}
-   [example.core/HumanName :family]    {:confirms #{zengen.dataset.human.lastname/english}}
-   [example.core/HumanName :given  :#] {:confirms #{zengen.dataset.human.firstname/english}}
-   [example.core/HumanName :suffix :#] {:confirms #{zengen.dataset.human.suffix/english}}
-   [example.core/HumanName :prefix :#] {:confirms #{zengen.dataset.human.prefix/english}}}}}}
+  {[example.core/HumanName :family]    {:confirms #{zengen.dataset.human.lastname/english}}
+   [example.core/HumanName :given  :#] {:confirms #{zengen.dataset.human.firstname/english}}}}}}}
 
 ```
 ``` clj
+(zengen.core/initialize ztx)
 (zengen.core/example ztx {:confirms #{example.core/HumanName})
 ;; =>
-;; {:text   "Donnie Williams",
-;;  :given  ["Gussie"],
-;;  :suffix ["Jr."],
-;;  :prefix ["De"],
+;; {:given  ["Gussie"]
 ;;  :family "Wright"}
 ```
 For an example of a `zengen.dataset.human.prefix` schema:
@@ -105,3 +91,4 @@ For an example of a `zengen.dataset.human.prefix` schema:
 
 ## Acknowledgments
 * [zen](https://github.com/zen-lang/zen)
+* [example](https://github.com/Panthevm/zengen/tree/master/example)
