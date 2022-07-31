@@ -1,0 +1,16 @@
+{ns example.core
+ import #{zengen.core
+          zengen.dataset.human.firstname
+          zengen.dataset.human.lastname}
+
+ HumanName
+ {:zen/tags #{zen/schema}
+  :type     zen/map
+  :keys     {:given  {:type zen/vector :every {:type zen/string}}
+             :family {:type zen/string}}}
+
+ GeneratorHumanName
+ {:zen/tags #{zengen.core/definition}
+  :options  
+  {[HumanName :family]    {:confirms #{zengen.dataset.human.lastname/english}}
+   [HumanName :given  :#] {:confirms #{zengen.dataset.human.firstname/english}}}}}

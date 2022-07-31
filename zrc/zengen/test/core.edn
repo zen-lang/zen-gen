@@ -31,7 +31,7 @@
                              :end   {:type zen/datetime}}}}}
 
  GeneratorHumanName
- {:zen/tags #{zen/schema zengen.core/definition}
+ {:zen/tags #{zengen.core/definition}
   :options  
   {[HumanName :family]    {:confirms #{zengen.dataset.human.lastname/english}}
    [HumanName :given  :#] {:confirms #{zengen.dataset.human.firstname/english}}

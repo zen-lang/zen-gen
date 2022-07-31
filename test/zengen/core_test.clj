@@ -29,5 +29,7 @@
 
 
 (comment
+  (zengen.core/initialize ztx)
+  (zen.core/read-ns ztx 'zengen.test.core)
   (zengen.core/example ztx {:confirms #{'zengen.test.core/HumanName}})
   )

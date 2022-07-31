@@ -1,0 +1,2 @@
+{:paths ["src" "zrc"]
+ :deps  {zengen/zengen {:local/root ".."}}}

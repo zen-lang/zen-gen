@@ -1,4 +1,4 @@
-{:paths ["src"]
+{:paths ["src" "zrc"]
  :deps  {zen-lang/zen
          {:git/url "https://github.com/zen-lang/zen.git"
           :sha "616ec584b6ce1d7096aa8c9a9efa8ea7dbb0f52d"}
