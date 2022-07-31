@@ -1,5 +1,6 @@
 (ns zengen.schema
   (:require zengen.generator
+            zengen.random
             deep.merge
             zen.core))
 

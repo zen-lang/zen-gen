@@ -1,10 +1,11 @@
 (ns zengen.string
-  (:require zengen.generator)
+  (:require zengen.generator
+            zengen.random)
   (:import com.github.curiousoddman.rgxgen.RgxGen))
 
 (defn generate
   [random regex]
-  (.generate (com.github.curiousoddman.rgxgen.RgxGen. regex) random))
+  (zengen.random/string random regex))
 
 (defmethod zengen.generator/generate 'zen/string
   [context schema]

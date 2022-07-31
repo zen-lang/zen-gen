@@ -1,5 +1,6 @@
 (ns zengen.boolean
-  (:require zengen.generator))
+  (:require zengen.generator
+            zengen.random))
 
 (defn generate
   [random]
@@ -9,4 +10,4 @@
   [context schema]
   (if-some [data (zengen.generator/generate context (dissoc schema :type))]
     data
-    (generate (:random context))))
+    (zengen.random/boolean (:random context))))
