@@ -9,23 +9,8 @@
 
   <p align="center">
     Random Data Generator based on zen schemes
-    <br />
-    <a href="https://github.com/Panthevm/zengen"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/Panthevm/zengen">View Demo</a>
-    ·
-    <a href="https://github.com/Panthevm/zengen/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/Panthevm/zengen/issues">Request Feature</a>
   </p>
 </div>
-
-## Getting Started
-
-
-## Usage
-
 
 ## Examples
 Create a schema describing the human's name
